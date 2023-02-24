@@ -8,7 +8,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      adress: {
+      address: {
+        type: Sequelize.STRING,
+      },
+      name: {
         type: Sequelize.STRING,
       },
       description: {
@@ -17,6 +20,7 @@ module.exports = {
       image: {
         type: Sequelize.INTEGER,
       },
+
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
