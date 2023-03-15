@@ -3,9 +3,16 @@ import bodyParser from "body-parser";
 import viewEngine from "./config/viewEngine";
 import initWebRoutes from "./route/web";
 import connectDB from "./config/connectDB";
+import cors from "cors";
+const corsOptions = {
+  origin: process.env.REACT_APP_FRONTEND_URL || "http://localhost:3000",
+  credentials: true,
+  optionSuccessStatus: 200,
+};
 require("dotenv").config();
 
 let app = express();
+app.use(cors(corsOptions));
 
 //config app
 
